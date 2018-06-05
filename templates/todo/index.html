@@ -13,12 +13,15 @@
     </h1>
 
     <form ng-submit="todoAdd()">
-        <input type="text" ng-model="todoInput" placeholder="Add a new to do ...">
+      <input type="text" ng-model="todoInput" placeholder="Add a new to do ...">
         <input type="submit" value="Submit">
     </form>
     <br>
     <div ng-repeat="todo in todoList">
+        <input type="checkbox" ng-model="todo.done">
         <span ng-bind="todo.todoText"></span>
+       <button ng-click="remove()">done</button>
+    </div>
     </div>
 
 </body>
